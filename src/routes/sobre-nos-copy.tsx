@@ -5,7 +5,7 @@ import { getSeoSettings } from "~/cms/services/singletons/settings";
 import { PageSeo } from "~/components/seo/page-inital";
 
 export const route: RouteDefinition = {
-  preload: () => Promise.all([getAboutUs(), getSeoSettings()]),
+  preload: () => Promise.all([getAboutUs(), getSeoSettings(true)]),
 };
 
 function AboutUsRoute() {
