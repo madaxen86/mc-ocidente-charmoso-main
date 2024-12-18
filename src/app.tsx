@@ -30,7 +30,7 @@ function App() {
       root={(props) => (
         <MetaProvider>
           <Suspense fallback={<LoadingScreen />}>
-            <DefaultSeo />
+            {/* <DefaultSeo /> */}
 
             <Header mode="solid" />
 
