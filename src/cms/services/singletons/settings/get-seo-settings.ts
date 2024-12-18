@@ -6,7 +6,8 @@ import type { SeoSettings } from "~/shared/types";
  */
 const getSeoSettings = query(async (): Promise<SeoSettings> => {
   "use server";
-
+  //wait for 2 seconds
+  await new Promise((r) => setTimeout(r, 2000));
   return { title: "MC Ocidente Charmoso", keywords: [""], description: "Some default descpition" };
 }, "seo-settings");
 
