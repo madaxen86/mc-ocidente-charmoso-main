@@ -29,13 +29,8 @@ type Props = {
 
 function PageSeo(props: Props) {
   const location = useLocation();
-  const seo = createAsync(() => getSeoSettings(), {
+  const seo = createAsync(() => getSeoSettings(true), {
     deferStream: true,
-    initialValue: {
-      title: "MC Ocidente Charmoso - initial",
-      description: "initial description",
-      keywords: ["design de interiores", "cozinhas por medida", "móveis"],
-    },
   });
 
   return (

@@ -2,7 +2,7 @@ import { type RouteDefinition, createAsync } from "@solidjs/router";
 import { Show } from "solid-js";
 import { getAboutUs } from "~/cms/services/singletons";
 import { getSeoSettings } from "~/cms/services/singletons/settings";
-import { PageSeo } from "~/components/seo";
+import { PageSeo } from "~/components/seo/page-inital";
 
 export const route: RouteDefinition = {
   preload: () => Promise.all([getAboutUs(), getSeoSettings()]),
