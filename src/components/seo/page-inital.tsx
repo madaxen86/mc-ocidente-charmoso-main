@@ -31,11 +31,11 @@ function PageSeo(props: Props) {
   const location = useLocation();
   const seo = createAsync(() => getSeoSettings(), {
     deferStream: true,
-    // initialValue: {
-    //   title: 'MC Ocidente Charmoso',
-    //   description: '',
-    //   keywords: ['design de interiores', 'cozinhas por medida', 'móveis'],
-    // },
+    initialValue: {
+      title: "MC Ocidente Charmoso",
+      description: "",
+      keywords: ["design de interiores", "cozinhas por medida", "móveis"],
+    },
   });
 
   return (

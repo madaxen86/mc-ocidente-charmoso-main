@@ -2,7 +2,7 @@ import { type RouteDefinition, createAsync } from "@solidjs/router";
 import { Show } from "solid-js";
 import { getAboutUs } from "~/cms/services/singletons";
 import { getSeoSettings } from "~/cms/services/singletons/settings";
-import { PageSeo } from "~/components/seo";
+import { PageSeo } from "~/components/seo/page-inital";
 
 export const route: RouteDefinition = {
   preload: () => Promise.all([getAboutUs(), getSeoSettings()]),
@@ -13,14 +13,14 @@ function AboutUsRoute() {
 
   return (
     <>
-      <Show when={data()}>
-        {(data) => (
-          <PageSeo
-            title={data().title ?? "Sobre nós - fallback"}
-            description={data().headline}
-          />
-        )}
-      </Show>
+      {/* <Show when={data()}>
+        {(data) => ( */}
+      <PageSeo
+        title={data()?.title ?? "Sobre nós - fallback"}
+        description={data()?.headline}
+      />
+      {/* )} */}
+      {/* </Show> */}
       <h1>Sobre Nos</h1>
       {/* <main>
         <header class="py-8 md:py-16">

@@ -13,14 +13,14 @@ function AboutUsRoute() {
 
   return (
     <>
-      <Show when={data()}>
-        {(data) => (
-          <PageSeo
-            title={data().title ?? "Sobre nós - fallback"}
-            description={data().headline}
-          />
-        )}
-      </Show>
+      {/* <Show when={data()}>
+        {(data) => ( */}
+      <PageSeo
+        title={data()?.title ?? "Sobre nós - fallback"}
+        description={data()?.headline}
+      />
+      {/* )} */}
+      {/* </Show> */}
       <h1>Sobre Nos</h1>
       {/* <main>
         <header class="py-8 md:py-16">
