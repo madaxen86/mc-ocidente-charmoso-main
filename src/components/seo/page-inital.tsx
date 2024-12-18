@@ -3,6 +3,7 @@ import { createAsync, useLocation } from "@solidjs/router";
 import { Match, Show, Suspense, Switch } from "solid-js";
 import { getSeoSettings } from "~/cms/services/singletons/settings";
 import { urlFor } from "~/cms/utils";
+import { DefaultSeo } from "~/components/seo/default";
 import { env } from "~/shared/utils";
 
 type Props = {
@@ -46,6 +47,7 @@ function PageSeo(props: Props) {
       <Show
         when={seo()}
         keyed
+        fallback={<DefaultSeo />}
       >
         {(defaultSeo) => (
           <>
