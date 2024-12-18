@@ -1,6 +1,4 @@
 import { query } from "@solidjs/router";
-import { client } from "~/cms";
-import { getSeoSettingsQuery } from "~/cms/queries/singletons";
 import type { SeoSettings } from "~/shared/types";
 
 /**

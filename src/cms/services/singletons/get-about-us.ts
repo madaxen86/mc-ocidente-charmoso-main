@@ -10,10 +10,8 @@ const getAboutUs = query<() => Promise<AboutUs | undefined>>(async () => {
   "use server";
 
   return {
-    aboutUs: {
-      title: "About us",
-      headline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
-    },
+    title: "About us",
+    headline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
   } as unknown as AboutUs;
 }, "about-us-page");
 
